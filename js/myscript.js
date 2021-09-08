@@ -78,7 +78,8 @@ let text =
   <h6>-------------------Abilities-------------------</h6>
   <li> Life Points Gained Once The Card is Deployed On The Battlefield: ${card.battlefieldAbilities.enteringLifePointsEarned}</li>
   <li> Green Beast Token put Onto The Battlefield Once The Card Is Withdrawn: ${card.tokenBeastNumber()}</li>
-  <li> Flavor Text : <em> ${card.battlefieldAbilities.cit}</em></li>
+  <h6>------------------Flavor Text------------------</h6>
+  <em> ${card.battlefieldAbilities.cit}</em>
   <h6>----------------Illustrator Info----------------</h6>
   <li> Name: ${card.illustratorInfo.name}</li>
   <li> Last Name: ${card.illustratorInfo.lastName}</li>
