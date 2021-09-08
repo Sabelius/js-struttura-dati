@@ -29,8 +29,9 @@ const card = {
   battlefieldAbilities : {
     enteringLifePointsEarned : 5,
     leavingTokenBeastValueCreated : 3,
-    cit : "Always carry two spears."
   },
+
+  flavorText : "Always carry two spears.",
   
   illustratorInfo : {
     name : "Nils",
@@ -79,7 +80,7 @@ let text =
   <li> Life Points Gained Once The Card is Deployed On The Battlefield: ${card.battlefieldAbilities.enteringLifePointsEarned}</li>
   <li> Green Beast Token put Onto The Battlefield Once The Card Is Withdrawn: ${card.tokenBeastNumber()}</li>
   <h6>------------------Flavor Text------------------</h6>
-  <em> ${card.battlefieldAbilities.cit}</em>
+  <em> ${card.flavorText}</em>
   <h6>----------------Illustrator Info----------------</h6>
   <li> Name: ${card.illustratorInfo.name}</li>
   <li> Last Name: ${card.illustratorInfo.lastName}</li>
