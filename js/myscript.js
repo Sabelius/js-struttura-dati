@@ -18,13 +18,13 @@ const card = {
   },
 
   expansion : { 
-    expansionName : "Blocco di Spirale Temporale",
-    expansionType : "Spirale Temporale",
+    expansionName : "ArchEnemy: Nicol Bolas",
+    expansionType : "Rare",
     expansionBorderColor : "Black",
-    expansionCardsNumber : 249,
+    expansionCardsNumber : 106,
   },
   
-  cardNumber : 195,
+  cardNumber : 075,
   
   battlefieldAbilities : {
     enteringLifePointsEarned : 5,
@@ -36,7 +36,11 @@ const card = {
     name : "Nils",
     lastName : "Hamm"
   },
-  
+
+  tokenBeastNumber : function(){
+    return this.battlefieldAbilities.leavingTokenBeastValueCreated + "/" + this.battlefieldAbilities.leavingTokenBeastValueCreated;
+  },
+
   convertedManaCost : function(){
     return this.launchCost.commonMana + this.launchCost.greenMana;
   }
@@ -48,10 +52,11 @@ console.log(card.convertedManaCost());
 
 let text =
 `<ul>
+  <h6>---------------General Info---------------</h6>
   <li> Name: ${card.name}</li>
   <li> Strength: ${card.strength}</li>
   <li> Constitution: ${card.constitution}</li>
-  <h6>----------Mana Stats----------</h6>
+  <h6>----------------Mana Stats----------------</h6>
   <li> Common Mana: ${card.launchCost.commonMana}</li>
   <li> White Mana: ${card.launchCost.whiteMana}</li>
   <li> Blue Mana: ${card.launchCost.blueMana}</li>
@@ -63,13 +68,22 @@ let text =
   <h6>----------Card Type Description----------</h6>
   <li> Type: ${card.cardTypeDescription.type}</li>
   <li> Race: ${card.cardTypeDescription.race}</li>
-  <h6>----------Expansion----------</h6>
+  <h6>-----------------Expansion-----------------</h6>
   <li> Name: ${card.expansion.expansionName}</li>
   <li> Type: ${card.expansion.expansionType}</li>
   <li> Border Color: ${card.expansion.expansionBorderColor}</li>
   <li> Cards Number: ${card.expansion.expansionCardsNumber}</li>
-
-
+  <h6>-------------Collection Number-------------</h6>
+  <li> Current Card Number: ${card.cardNumber}</li>
+  <h6>-------------------Abilities-------------------</h6>
+  <li> Life Points Gained Once The Card is Deployed On The Battlefield: ${card.battlefieldAbilities.enteringLifePointsEarned}</li>
+  <li> Green Beast Token put Onto The Battlefield Once The Card Is Withdrawn: ${card.tokenBeastNumber()}</li>
+  <li> Flavor Text : <em> ${card.battlefieldAbilities.cit}</em></li>
+  <h6>----------------Illustrator Info----------------</h6>
+  <li> Name: ${card.illustratorInfo.name}</li>
+  <li> Last Name: ${card.illustratorInfo.lastName}</li>
+  <h6>------------------Card Image------------------</h6>
+  <img src="img/thragtusk.png" alt="cardimage">
 </ul>`
 
 
