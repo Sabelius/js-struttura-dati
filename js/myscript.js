@@ -48,8 +48,6 @@ const card = {
 }
 
 console.table(card);
-console.log(card.convertedManaCost());
-
 
 let text =
 `<ul>
@@ -86,7 +84,7 @@ let text =
   <li> Last Name: ${card.illustratorInfo.lastName}</li>
   <h6>------------------Card Image------------------</h6>
   <img src="img/thragtusk.png" alt="cardimage">
-</ul>`
+</ul>`;
 
 
 
